@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "EMR调阅页面";
+}
+<script type="text/javascript">
+    function init() {
+        var objParam = {
+            "zyId": '@ViewBag.zyId',
+            "doctorId": '@ViewBag.doctorId',
+            "doctorName": '@ViewBag.doctorName',
+            "departmentId": '@ViewBag.doctorName',
+            "departmentName": '@ViewBag.departmentName',
+            "orgId": '@ViewBag.orgId',
+            "orgName": '@ViewBag.orgName',
+            "serviceUrl": '@ViewBag.serviceUrl'
+        };
+        emrEditor.SetBaseInfo(JSON.stringify(objParam));
+    }
+</script>
+<body onload="init()">
+<div class="row">
+    <object id="emrEditor" classid="CLSID:F8D25819-93E2-4A55-9910-B4664F008609"></object>
+</div>
+</body>
